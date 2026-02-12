@@ -67,12 +67,16 @@
       </div>
       <!-- Result Popup -->
 <div id="resultPopup"
-     class="hidden fixed inset-0 bg-black/70 flex items-center justify-center text-center p-6">
+     class="hidden fixed inset-0 z-50 pointer-events-none bg-black/70 flex items-center justify-center text-center p-6">
   <div class="bg-white rounded-2xl p-8 shadow-xl max-w-md animate-bounce">
-    <h2 class="text-3xl font-bold text-pink-600 mb-3"> Congratulations! </h2>
+    <h2 class="text-3xl font-bold text-pink-600 mb-3"> Congratulations! Vishakha </h2>
     <p class="text-xl text-gray-700">
       You have made the right choice 
     </p>
+    <button onclick="location.reload()"
+      class="mt-6 px-6 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 hover:scale-110 transition">
+      Play again 
+    </button>
   </div>
 </div>
     </section>
@@ -156,8 +160,9 @@
   valentineQuestion.textContent = 'Yayyy!! ';
   responseButtons.style.display = 'none';
 
-  // Show popup message
-  document.getElementById('resultPopup').classList.remove('hidden');
+  /const popup = document.getElementById('resultPopup');
+popup.classList.remove('hidden');
+popup.classList.remove('pointer-events-none');
 
   // Heart-shaped confetti
   const heart = confetti.shapeFromPath({
@@ -181,6 +186,7 @@
   </script>
 </body>
 </html>
+
 
 
 
