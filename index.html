@@ -67,17 +67,17 @@
       </div>
       <!-- Result Popup -->
 <div id="resultPopup"
-     class="hidden fixed inset-0 z-50 bg-black/70 flex items-center justify-center text-center p-6">
-  <div class="bg-white rounded-2xl p-8 shadow-xl max-w-md animate-bounce">
-    <h2 class="text-3xl font-bold text-pink-600 mb-3"> Congratulations! Vishakha </h2>
-    <p class="text-xl text-gray-700">
-      You have made the right choice 
-    </p>
+ class="hidden fixed inset-0 z-50 bg-black/70 flex items-center justify-center text-center p-6">
+ <div class="bg-white rounded-2xl p-8 shadow-xl max-w-md animate-bounce">
+ <h2 class="text-3xl font-bold text-pink-600 mb-3"> Congratulations! Vishakha </h2>
+ <p class="text-xl text-gray-700">
+ You have made the right choice 
+ </p>
     <button onclick="location.reload()"
-      class="mt-6 px-6 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 hover:scale-110 transition">
-      Play again 
-    </button>
-  </div>
+ class="mt-6 px-6 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 hover:scale-110 transition">
+ Play again 
+ </button>
+ </div>
 </div>
     </section>
   </main>
@@ -154,40 +154,36 @@
       });
 
       yesButton.addEventListener('click', () => {
-  imageDisplay.src = IMAGE_PATHS[IMAGE_PATHS.length - 1];
-  imageDisplay.alt = ALT_TEXTS[ALT_TEXTS.length - 1];
+        imageDisplay.src = IMAGE_PATHS[IMAGE_PATHS.length - 1];
+        imageDisplay.alt = ALT_TEXTS[ALT_TEXTS.length - 1];
 
-  valentineQuestion.textContent = 'Yayyy!! ';
-  responseButtons.style.display = 'none';
+        valentineQuestion.textContent = 'Yayyy!! ';
+        responseButtons.style.display = 'none';
 
-  const popup = document.getElementById('resultPopup');
-popup.classList.remove('hidden');
-popup.classList.remove('pointer-events-none');
+        const popup = document.getElementById('resultPopup');
+        popup.classList.remove('hidden');
+        popup.classList.remove('pointer-events-none');
 
-  // Heart-shaped confetti
-  const heart = confetti.shapeFromPath({
-    path: 'M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z',
-  });
+        // Heart-shaped confetti
+        const heart = confetti.shapeFromPath({
+        path: 'M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z',
+        });
 
-  const defaults = {
-    spread: 360,
-    ticks: 100,
-    gravity: 0,
-    decay: 0.94,
-    startVelocity: 20,
-    shapes: [heart],
-    colors: ['#ff69b4', '#ff1493', '#ff6b81', '#e84393']
-  };
+        const defaults = {
+          spread: 360,
+          ticks: 100,
+          gravity: 0,
+          decay: 0.94,
+          startVelocity: 20,
+          shapes: [heart],
+          colors: ['#ff69b4', '#ff1493', '#ff6b81', '#e84393']
+        };
 
-  confetti({ ...defaults, particleCount: 50, scalar: 2 });
-  confetti({ ...defaults, particleCount: 25, scalar: 3 });
-  confetti({ ...defaults, particleCount: 10, scalar: 4 });
-})();
+        confetti({ ...defaults, particleCount: 50, scalar: 2 });
+        confetti({ ...defaults, particleCount: 25, scalar: 3 });
+        confetti({ ...defaults, particleCount: 10, scalar: 4 });
+      });
+    })();
   </script>
 </body>
 </html>
-
-
-
-
-
